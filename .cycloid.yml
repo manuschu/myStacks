@@ -1,17 +1,17 @@
 ---
 version: '2'
 # Configuration of the Cycloid stack
-name: 'Magento'
-canonical: 'stack-magento'
+name: 'Magento-S3'
+canonical: 'stack-magento-S3'
 status: 'public'
 description: |
-  Used to deploy a Magento on X Amazon EC2 instances behind an ELB load balancer, using RDS database and ElasticCache.
+  Used to deploy a Magento on X Amazon EC2 instances behind an ELB load balancer, using RDS database and ElasticCache, plus a S3 bucket.
 keywords:
   - 'magento'
   - 'provider:aws'
-author: 'Cycloid'
+author: 'Manuel4Cycloid'
 image: |
-  https://raw.githubusercontent.com/cycloid-community-catalog/stack-magento/master/icon.png
+  https://raw.githubusercontent.com/manuschu/myStacks/master/icon.png
 technologies:
   - technology: Debian
     version: 9.x
@@ -25,6 +25,10 @@ technologies:
     version: 5.x
   - technology: Magento
     version: 2.x
+  - technology: Amazon s3
+    version: n/a
+  - technology: terraform
+    version: n/a
 
 config:
   default:

@@ -4,14 +4,14 @@
 
 #. git_repository (required): git@github.com:my/repo_to_validate.git
 #+ Git repository URL containing the stack to validate.
-git_repository: git@github.com:cycloid-community-catalog/stack-magento.git
+git_repository: git@github.com:manuschu/myStacks.git
 
 #. git_branch (required): master
 #+ Branch of the stack to validate Git repository.
 git_branch: master
 
 # git status
-git_repository_name: cycloid-community-catalog/stack-magento
+git_repository_name: manuschu/myStacks
 git_access_token: ((github_access_token.data))
 
 #. git_key (required): ((git.ssh_key))
@@ -55,7 +55,7 @@ pipeline_env_vars:
   # Where to create the pipeline
   ORGANIZATION: cycloid-owl
   # Which project to use for pipeline
-  PROJECT: ci-stack-magento
+  PROJECT: ci-stack-magento-s3
   # Which environment to use for pipeline
   ENVIRONMENT: master
   # Tmp name to create the pipeline
@@ -87,7 +87,7 @@ env: master
 
 #. project (required): ci-stack-magento
 #+ Name of the project.
-project: ci-stack-magento
+project: ci-stack-magento-s3
 
 #. customer (required): cycloid-owl
 #+ Name of the Cycloid Organization, used as customer variable name.

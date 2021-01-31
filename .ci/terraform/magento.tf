@@ -117,4 +117,19 @@ module "magento" {
   #. front_ebs_optimized (optional, bool): false
   #+ Whether the Instance is EBS optimized or not, related to the instance type you choose.
   # front_ebs_optimized   = "false"
+
+  ### S3 related - Manuel ###
+  #. bucket_name (required):
+  #+ Name of the S3 bucket to create. Only lowercase alphanumeric characters and hyphens allowed.
+  bucket_name              = "bucket-name"
+
+  #. bucket_acl (optional): private
+  #+ S3 canned ACL: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl
+
+  #. versioning_enabled (optional, bool): false
+  #+ Enable S3 bucket versionning.
+
+  #. extra_tags(optional, dict): {}
+  #+ Dict of extra tags to add on aws resources..
+  extra_tags = {"foo":"bar"}
 }
