@@ -60,7 +60,7 @@ variable "vpc_id" {
 }
 
 variable "project" {
-  default = "magento"
+  default = "magento-s3"
 }
 
 variable "rds_database" {
@@ -190,4 +190,21 @@ resource "random_string" "elasticache_cluster_id" {
 
 locals {
   elasticache_cluster_id = var.elasticache_cluster_id != "" ? var.elasticache_cluster_id : "cy${random_string.elasticache_cluster_id.result}"
+}
+
+###
+
+# S3 - Manuel
+
+###
+
+variable "bucket_name" {
+}
+
+variable "bucket_acl" {
+  default = "private"
+}
+
+variable "versioning_enabled" {
+  default = false
 }
