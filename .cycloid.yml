@@ -2,7 +2,7 @@
 version: '2'
 # Configuration of the Cycloid stack
 name: 'Magento-S3'
-canonical: 'stack-magento-S3'
+canonical: 'stack-magentoManuel'
 status: 'public'
 description: |
   Used to deploy a Magento on X Amazon EC2 instances behind an ELB load balancer, using RDS database and ElasticCache, plus a S3 bucket.
