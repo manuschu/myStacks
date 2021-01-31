@@ -206,5 +206,5 @@ variable "bucket_acl" {
 }
 
 variable "versioning_enabled" {
-  default = false
+  default = true
 }

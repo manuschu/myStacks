@@ -305,18 +305,19 @@ default:
         widget: simple_text
         type: string
         default: ""
+        required: true
       - name: "S3 bucket ACL"
         description: "Magento S3 bucket ACL."
         key: bucket_acl
         widget: simple_text
         type: string
-        default: "admin"
+        default: "private"
       - name: "S3 versioning enabled"
         description: "Magento S3 bucket mode."
         key: versioning_enabled
         widget: simple_text
         type: string
-        default: "yes"
+        default: "true"
   ansible:
     magento:
       - name: "Admin user"
